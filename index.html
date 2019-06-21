@@ -1,0 +1,45 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class="books">
+      <table id="book-table">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Pages</th>
+          <th>Completed</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+    </section>
+    <section class="new-book">
+      <button id="btn-new">New Book</button>
+      <form id="new-book" style="visibility: hidden">
+        <label for="new-title">
+          Title
+          <input type="text" name="new-title" id="new-title">
+        </label>
+        <label for="new-author">
+          Author
+          <input type="text" name="new-author" id="new-author">
+        </label>
+        <label for="new-pages">
+          Pages
+          <input type="number" name="new-pages" id="new-pages">
+        </label>
+        <label for="new-read">
+          Read?
+          <input type="checkbox" name="new-read" id="new-read">
+        </label>
+        <input type="submit" value="Create" id="new-submit">
+      </form>
+    </section>
+  <script src="./main.js"></script>
+  </body>
+</html>>
