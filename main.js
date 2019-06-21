@@ -1,6 +1,8 @@
 const myLibrary = [];
 const bookTable = document.getElementById('book-table');
-const btnNewBook = document.getElementById('new-book');
+const btnNewBook = document.getElementById('btn-new');
+const formNewBook = document.getElementById('new-book');
+const btnSubmitBook = document.getElementById('new-submit');
 
 function Book(title, author, pages, read) {
   this.title = title
@@ -30,8 +32,27 @@ function renderSingle(book) {
     bookTable.appendChild(row);
 }
 
+btnNewBook.onclick = () => {
+  formNewBook.style.visibility = 'visible'
+};
+
 function getBookInfo() {
-  
+  const title = document.getElementById('new-title').value;
+  const author = document.getElementById('new-author').value;
+  const pages = document.getElementById('new-pages').value;
+  const read = document.getElementById('new-read').value;
+  return [title, author, pages, read];
+}
+
+function createBook() {
+  values = getBookInfo();
+  book = new Book(values[0], values[1], values[2], values[3]);
+  addToLibrary(book);
+}
+
+btnSubmitBook.onclick = (e) => {
+  e.preventDefault();
+  createBook();
 }
 
 myBook = new Book('test','test',23,true);
