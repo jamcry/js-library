@@ -1,6 +1,7 @@
 const myLibrary = [];
 const bookTable = document.getElementById('book-table');
 const btnNewBook = document.getElementById('btn-new');
+const btnCloseForm = document.getElementById('btn-close-form');
 const formNewBook = document.getElementById('new-book');
 const btnSubmitBook = document.getElementById('new-submit');
 let bookCount = 0;
@@ -61,8 +62,15 @@ function renderSingle(book, index) {
     bookTable.appendChild(row);
 }
 
-btnNewBook.onclick = () => {
-  formNewBook.style.visibility = 'visible'
+btnNewBook.onclick = (e) => {
+  e.preventDefault;
+  formNewBook.style.visibility = 'visible';
+  document.getElementById('new-title').focus();
+};
+
+btnCloseForm.onclick = (e) => {
+  e.preventDefault();
+  formNewBook.style.visibility = 'hidden';
 };
 
 function getBookInfo() {

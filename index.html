@@ -1,15 +1,14 @@
 <!DOCTYPE <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>JS Library Management</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   </head>
   <body>
-    <div class="container">
+    <div class="container pb-4">
       <p class="display-4">Library Management</p>
       <section class="books">
         <h2>Book List</h2>
@@ -25,9 +24,9 @@
         </table>
       </section>
       <section class="book-section text-center">
-        <button id="btn-new">New Book</button>
-        
+        <button id="btn-new" class="btn badge badge-pill badge-success px-3"><h2>+</h2></button>
         <form id="new-book" style="visibility: hidden" class="jumbotron p-1 mt-2">
+            <button id="btn-close-form" class="btn badge badge-pill badge-secondary float-right">X</button>
             <h2>Add a New Book</h2>
             <p>Please fill in the blanks with the information of the book that you want to
               add to our library. </p>
@@ -50,10 +49,13 @@
             <input type="checkbox" name="new-read" id="new-read" class="">
             Completed
           </label>
-          <input type="submit" value="Create" id="new-submit" class="btn btn-primary">
+          <input type="submit" value="Create" id="new-submit" class="btn btn-primary"><br>
         </form>
       </section>
     </div>
-  <script src="./main.js"></script>
+    <footer class="bg-dark text-white text-center mb-0 py-3">
+      <small>Created by <a href="https://github.com/jamcry" target="_blank" class="text-white"><b>JamCry</b></a> © 2019</small>
+    </footer>
+    <script src="./main.js"></script>
   </body>
 </html>
