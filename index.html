@@ -5,41 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   </head>
   <body>
-    <section class="books">
-      <table id="book-table">
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Pages</th>
-          <th>Completed</th>
-          <th>Actions</th>
-        </tr>
-      </table>
-    </section>
-    <section class="book-section">
-      <button id="btn-new">New Book</button>
-      <form id="new-book" style="visibility: hidden">
-        <label for="new-title">
-          Title
-          <input type="text" name="new-title" id="new-title">
-        </label>
-        <label for="new-author">
-          Author
-          <input type="text" name="new-author" id="new-author">
-        </label>
-        <label for="new-pages">
-          Pages
-          <input type="number" name="new-pages" id="new-pages">
-        </label>
-        <label for="new-read">
-          Read?
-          <input type="checkbox" name="new-read" id="new-read">
-        </label>
-        <input type="submit" value="Create" id="new-submit">
-      </form>
-    </section>
+    <div class="container">
+      <p class="display-4">Library Management</p>
+      <section class="books">
+        <h2>Book List</h2>
+        <table id="book-table" class="table table-striped table-sm">
+          <thead class="thead-dark">
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </table>
+      </section>
+      <section class="book-section text-center">
+        <button id="btn-new">New Book</button>
+        
+        <form id="new-book" style="visibility: hidden" class="jumbotron p-1 mt-2">
+            <h2>Add a New Book</h2>
+            <p>Please fill in the blanks with the information of the book that you want to
+              add to our library. </p>
+          <label for="new-title">
+            Title
+            <input type="text" name="new-title" id="new-title" class="form-control">
+            <small id="error-title" class="error">(1-50 characters)</small>
+          </label><br>
+          <label for="new-author">
+            Author
+            <input type="text" name="new-author" id="new-author" class="form-control">
+            <small id="error-author" class="error">(3-30 characters)</small>
+          </label><br>
+          <label for="new-pages">
+            Pages
+            <input type="number" name="new-pages" id="new-pages" class="form-control">
+            <small id="error-pages" class="error">(1-50000 pages)</small>
+          </label><br>
+          <label for="new-read">
+            <input type="checkbox" name="new-read" id="new-read" class="">
+            Completed
+          </label>
+          <input type="submit" value="Create" id="new-submit" class="btn btn-primary">
+        </form>
+      </section>
+    </div>
   <script src="./main.js"></script>
   </body>
 </html>

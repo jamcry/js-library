@@ -1,0 +1,9 @@
+#new-book label{
+  margin-right: 15px;
+}
+
+small.error {
+  visibility: hidden;
+  color: red;
+  font-weight: bold;
+}
