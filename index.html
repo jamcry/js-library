@@ -32,18 +32,15 @@
               add to our library. </p>
           <label for="new-title">
             Title
-            <input type="text" name="new-title" id="new-title" class="form-control">
-            <small id="error-title" class="error">(1-50 characters)</small>
+            <input type="text" name="new-title" id="new-title" class="form-control" minlength="1" maxlength="50" required>
           </label><br>
           <label for="new-author">
             Author
-            <input type="text" name="new-author" id="new-author" class="form-control">
-            <small id="error-author" class="error">(3-30 characters)</small>
+            <input type="text" name="new-author" id="new-author" class="form-control" minlength="1" maxlength="30" required>
           </label><br>
           <label for="new-pages">
             Pages
-            <input type="number" name="new-pages" id="new-pages" class="form-control">
-            <small id="error-pages" class="error">(1-50000 pages)</small>
+            <input type="number" name="new-pages" id="new-pages" class="form-control" min="1" max="50000" step="1" required>
           </label><br>
           <label for="new-read">
             <input type="checkbox" name="new-read" id="new-read" class="">
